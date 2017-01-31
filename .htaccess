@@ -1,0 +1,22 @@
+<IfModule mod_rewrite.c> 
+	RewriteEngine on
+	RewriteCond %{REQUEST_URI} !^public
+        RewriteCond $1 !^(userfiles/)
+	RewriteCond $1 !^(images/)
+	RewriteCond $1 !^(adminer/)
+        RewriteRule ^(.*)$ web/$1 [L] 
+        RewriteRule ^/?images(.*)  /web/images/$1
+        RewriteRule ^/?userfiles(.*)  /web/userfiles/$1
+</IfModule>
+
+
+
+
+# Deny accessing below extensions
+<Files ~ "(.json|.lock|.git)">
+Order allow,deny
+Deny from all
+</Files>
+
+# Deny accessing dot files
+RewriteRule (^\.|/\.) - [F]
