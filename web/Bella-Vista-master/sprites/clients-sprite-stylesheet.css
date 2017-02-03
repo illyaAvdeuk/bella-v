@@ -1,0 +1,6 @@
+.clients-sprite
+{ display: inline-block; background: url('png.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
+ 
+.clients-sprite__client1 { background-position: -0px -0px; width: 34px; height: 34px; }
+.clients-sprite__client2 { background-position: -0px -34px; width: 34px; height: 34px; }
+.clients-sprite__client3 { background-position: -0px -68px; width: 34px; height: 34px; }

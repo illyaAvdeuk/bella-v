@@ -1,0 +1,25 @@
+.logos-sprite {
+    background-image: url(logos-sprite.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+.logos-sprite__logoFooter {
+    width: 68px;
+    height: 68px;
+    background-position: -5px -5px;
+}
+.logos-sprite__mustache-left {
+    width: 72px;
+    height: 9px;
+    background-position: -5px -83px;
+}
+.logos-sprite__mustache-right {
+    width: 72px;
+    height: 9px;
+    background-position: -5px -102px;
+}
+.logos-sprite__seo-studio {
+    width: 83px;
+    height: 23px;
+    background-position: -5px -121px;
+}
