@@ -2,6 +2,6 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'News';
+$this->title = 'New';
 ?>
 <?= $content ?>
