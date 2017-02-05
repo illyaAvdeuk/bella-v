@@ -37,6 +37,7 @@ class BaseController extends \yii\web\Controller
                 default:
             }
             if ($rows) {
+                print_r($rows);
                 $rows = $rows->infoRecords;
                 $rows = \yii\helpers\ArrayHelper::index($rows, 'lang');
             }

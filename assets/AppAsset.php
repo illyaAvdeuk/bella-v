@@ -18,16 +18,24 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        '/css/style.css',
-        '/css/custom.css',
+      #  '/web/css/site.css',
+       # '/web/css/slickplugin.css',
+       # '/web/css/fancyboxplugin.css',
+        '/web/css/base.css',
+       # '/web/css/index.css',
     ];
     public $js = [
-        'http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js',
-        '/js/app.js',
-        '/js/custom.js',
+        '/web/js/jquery-3.1.1.js',
+        '/web/js/jquery-ui.js',
+        '/web/js/jquery.selectric.js',
+        '/web/js/slick.min.js',
+        '/web/fancybox/lib/jquery.mousewheel.pack.js?v=3.1.3',
+        '/web/fancybox/source/jquery.fancybox.pack.js?v=2.1.5',
+        '/web/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7',
+        '/web/js/main.js',
     ];
     public $depends = [
-        //'yii\web\YiiAsset',
-        //'yii\bootstrap\BootstrapAsset',
+        'yii\web\YiiAsset',
+       # 'yii\bootstrap\BootstrapAsset',
     ];
 }

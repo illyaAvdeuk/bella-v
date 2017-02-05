@@ -6,60 +6,22 @@
 /* @var $exception Exception */
 
 use yii\helpers\Html;
-use yii\helpers\Url;
+
+$this->title = $name;
 ?>
-<!-- PAGE -->
-<section id="page" class="page page__hydropeptide">
+<div class="site-error">
 
-        <div class="page__inner">
-                <!-- breadcrumbs -->
-                <div class="breadcrumbs is-slideInLeft is-animated">
-                <ol class="breadcrumbs__list">
-                    <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                        <a href="<?= Url::to(['/']) ?>" class="breadcrumbs__link" itemprop="url">
-                            <span itemprop="title">Главная</span>
-                        </a>
-                    </li>
-                    <li class="breadcrumbs__item">
-                        404
-                    </li>
-                </ol>
-        </div>
-        <!-- /breadcrumbs -->
+    <h1><?= Html::encode($this->title) ?></h1>
 
-                <div class="page__content">
-                        
-                    <article class="g-block is-fadeIn is-animated">
-                            <div class="g-content">
-                                <h1>404 Страница не найдена</h1>
-                                <p>Запрашиваемая страница отсутствует, либо адрес был изменен</p>
-                                <div class="g-title g-title--small is-slideInUp is-animated">
-                                    <div class="title__text">
-                                        <a href="<?= Url::to(['/']) ?>" class="title__link">Вернуться на главную</a>
-                                        <div class="title__underline is-slideInLeft is-animated"></div>
-                                    </div>
-                                </div>
-                            </div>
-                    </article>
+    <div class="alert alert-danger">
+        <?= nl2br(Html::encode($message)) ?>
+    </div>
 
-                
-                </div>
-        </div>
+    <p>
+        The above error occurred while the Web server was processing your request.
+    </p>
+    <p>
+        Please contact us if you think this is a server error. Thank you.
+    </p>
 
-        <div class="layer layer-1">
-                <div class="page__block page__block-1 is-modifiedFadeInLeft is-animated"></div>
-        </div>
-
-        <div class="layer layer-2">
-                <div class="page__block page__block-2 is-modifiedFadeInRight is-animated"></div>	
-        </div>
-
-        <div class="layer layer-3">
-                <div class="page__block page__block-3 is-modifiedFadeInLeft is-animated"></div>
-        </div>
-
-        <div class="layer layer-4">
-                <div class="page__block page__block-4 is-modifiedFadeInRight is-animated"></div>	
-        </div>
-</section>
-<!-- /PAGE -->
+</div>

@@ -28,9 +28,3 @@ phpunit.phar
 
 tests/_output/*
 tests/_support/_generated
-
-/logs
-
-admin/config.php
-config/db.php
-/config/db.php

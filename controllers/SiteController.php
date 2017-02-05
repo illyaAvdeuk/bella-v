@@ -43,9 +43,9 @@ class SiteController extends Controller
     public function actions()
     {
         return [
-//            'error' => [
-//                'class' => 'yii\web\ErrorAction',
-//            ],
+            'error' => [
+                'class' => 'yii\web\ErrorAction',
+            ],
             'captcha' => [
                 'class' => 'yii\captcha\CaptchaAction',
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
@@ -60,14 +60,8 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $this->layout = 'home';
-        return $this->render('index',[
-            'lastPosts' => Yii::$app->blog->getPostsByLimit(3),
-            'brands' => \app\models\Brands::find()
-                    ->joinWith('info')
-                    ->joinWith('issetProduct',true,'INNER JOIN')
-                    ->all()
-        ]);
+       
+        return $this->render('index');
     }
 
     /**
@@ -90,21 +84,6 @@ class SiteController extends Controller
         ]);
     }
 
-    public function actionError()
-    {
-        $exception = Yii::$app->errorHandler->exception;
-        if ($exception->statusCode == 404) {
-            
-            if (Yii::$app->page->isPage()) {
-                Yii::$app->errorHandler->exception->statusCode = 200;
-                return $this->render('default');
-            }
-        }
-        if ($exception !== null) {
-            return $this->render('error', ['exception' => $exception]);
-        }
-    }
-    
     /**
      * Logout action.
      *

@@ -1,0 +1,29 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-logoFooter {
+    width: 68px;
+    height: 68px;
+    background-position: -5px -5px;
+}
+
+.sprite-mustache-left {
+    width: 72px;
+    height: 9px;
+    background-position: -5px -83px;
+}
+
+.sprite-mustache-right {
+    width: 72px;
+    height: 9px;
+    background-position: -5px -102px;
+}
+
+.sprite-seo-studio {
+    width: 83px;
+    height: 23px;
+    background-position: -5px -121px;
+}
